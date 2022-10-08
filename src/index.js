@@ -19,7 +19,7 @@ const processData = (weatherData) => {
 
 const getData = async (key, location) => {
   try {
-    const url = `http://api.openweathermap.org/data/2.5/forecast?q=${location}&APPID=${key}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&APPID=${key}&units=metric`;
     const response = await fetch(url, { mode: "cors" });
     if (response.status === 200) {
       const weatherData = await response.json();
@@ -34,7 +34,6 @@ const getData = async (key, location) => {
 };
 
 const form = document.querySelector("form");
-form.preventDefault();
 const searchButton = document.querySelector(".search-button");
 searchButton.addEventListener("click", async () => {
   if (!form.checkValidity()) {
