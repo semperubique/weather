@@ -9,13 +9,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="form-container">
-    <form action="#" method="get">
-      <label for="location"></label>
-      <input type="text" id="location" name="location" placeholder="Enter city name" required>
-      <button class='search-button' type="button">Search</button>
-    </form>
-  </div>
+  <header>
+    <h1>Weather or not</h1>
+  </header>
+  <main>
+    <div class="form-container">
+      <form action="#" method="get" onsubmit="return false;"
+      >
+        <label for="location"></label>
+        <input type="text" id="location" name="location" placeholder="Enter city name" required>
+        <button class='search-button' type="button">Search</button>
+      </form>
+    </div>
+    <div class="information">
+      <div id="loading" class="hidden"></div>
+      <div class="today">
+        <h1 class="city-name"></h1>
+        <h3 class="weather-description"></h3>
+        <span class="current-temp"></span>
+        <p class="humidity"></p>
+        <span class="wind-speed"></span>
+      </div>
+    </div>  
+  </main>
+  <footer></footer>
 
 </body>
 </html>
