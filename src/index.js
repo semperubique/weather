@@ -34,6 +34,7 @@ const getData = async (key, location) => {
 };
 
 const form = document.querySelector("form");
+form.preventDefault();
 const searchButton = document.querySelector(".search-button");
 searchButton.addEventListener("click", async () => {
   if (!form.checkValidity()) {
